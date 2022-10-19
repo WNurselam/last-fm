@@ -11,14 +11,13 @@
   align-items: center;
   border-radius: 8px;
   margin-bottom: 40px;
+  width: 100%;
 }
 
 @media screen and (max-width: 920px) { 
   .track-card{
-   flex-direction: column;
-   width: 100%;
-   align-items: center;
-   justify-content: center;  
+   flex-direction: column; 
+   height:300px
   
   }
  }
