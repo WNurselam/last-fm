@@ -1,0 +1,66 @@
+.artist-detail {
+  width: 80%;
+  margin: auto;
+  height: 100%;
+}
+
+.artist-name {
+  margin: 20px 0px;
+  height: 170px;
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  border-radius: 8px;
+  align-items: center;
+  border-top: 5px solid rgb(202, 140, 25);
+}
+
+.artist-name > img {
+  padding: 50px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 100px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.header {
+  border-bottom: 3px solid #9df9ef;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 920px) {
+  .main {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.albumscrol {
+  overflow-y: scroll;
+  height: 500px;
+  -ms-overflow-style: none;
+  padding: 50px;
+}
+
+.albumscrol::-webkit-scrollbar {
+  width: 10px;
+  background-color: darkgrey;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  scrollbar-width: thin;
+}
+
+.albumscrol::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  border-radius: 100px;
+}

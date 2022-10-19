@@ -1,0 +1,28 @@
+.artist-card {
+  width: 60%;
+  height: 180px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+  padding: 20px 100px;
+  letter-spacing: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border-top: 5px solid rgb(202, 140, 25);
+}
+.artist > p {
+  border-bottom: 3px solid black;
+}
+
+@media screen and (max-width: 920px) {
+  .artist-card {
+    width: 90%;
+    padding: 10px;
+    flex-direction: column;
+  }
+}
