@@ -44,19 +44,23 @@ const ArtistDetail = () => {
       </div>
 
       <div className="main">
-        <div className="albumscrol">
+        <div className="album-track">
           <p className="header">Top Albums</p>
-          {isLoading ? (
-            <div>Loading...</div>
-          ) : (
-            albums &&
-            albums.map((album, index) => <Album album={album} key={index} />)
-          )}
+          <div className="albumscrol">
+            {isLoading ? (
+              <div>Loading...</div>
+            ) : (
+              albums &&
+              albums.map((album, index) => <Album album={album} key={index} />)
+            )}
+          </div>
         </div>
-        <div className="albumscrol">
+        <div className="album-track">
           <p className="header">Top Tracks</p>
-          {tracks &&
-            tracks.map((track, index) => <Track track={track} key={index} />)}
+          <div className="albumscrol">
+            {tracks &&
+              tracks.map((track, index) => <Track track={track} key={index} />)}
+          </div>
         </div>
       </div>
     </div>
