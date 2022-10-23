@@ -8,7 +8,6 @@ import InfiniteScroll from "react-infinite-scroll-component";
 const ArtistList = () => {
   const [artists, setArtists] = useState([]);
   const [page, setPage] = useState(1);
-  const [totalArtist, setTotalArtist] = useState(0);
 
   useEffect(() => {
     fetchData();
@@ -20,9 +19,8 @@ const ArtistList = () => {
         `https://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=c88f5fe3f52f040d8e458b1c39399974&format=json&page=${page}`
       )
       .then(({ data }) => {
-        setPage(page + 1);
         setArtists([...artists, ...data.artists.artist]);
-        setTotalArtist(data.totalArtist);
+        setPage(page + 1);
       })
       .catch((error) => {
         console.log(error);
@@ -32,7 +30,7 @@ const ArtistList = () => {
     <div className="artist-container">
       <h1>Artist</h1>
       <InfiniteScroll
-        dataLength={artists.length} 
+        dataLength={artists.length}
         next={fetchData}
         hasMore={true}
         loader={<h4>Loading...</h4>}
