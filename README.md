@@ -4,5 +4,5 @@
 - React Query
 - Axios 
 - Dark Mode
-- Context 
+- Context API
 - React Router
